@@ -6,6 +6,7 @@ import LoginPage from './Components/Pages/LoginPage.jsx';
 import HomePage from './Components/Pages/HomePage.jsx';
 import ProfilePage from './Components/Pages/ProfilePage.jsx';
 import CompletedTasksPage from './Components/Pages/CompletedTasksPage.jsx';
+import './App.css';
 
 const PrivateRoute = ({ element: Component, ...rest }) => {
   const isAuthenticated = localStorage.getItem('isAuthenticated');

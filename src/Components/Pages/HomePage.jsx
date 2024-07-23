@@ -4,6 +4,7 @@ import TaskList from '../TaskList.jsx';
 import TaskForm from '../TaskForm.jsx';
 import FilterTasks from '../FilterTasks.jsx';
 import SearchBar from '../SearchBar.jsx';
+import './HomePage.css';
 
 const HomePage = () => {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []);
@@ -51,9 +52,11 @@ const HomePage = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Home</h2>
-      <TaskForm addTask={addTask} />
+      <div className="card">
+        <TaskForm addTask={addTask} />
+      </div>
       <FilterTasks setFilter={setFilter} />
       <SearchBar setFilter={setFilter} />
       <TaskList
