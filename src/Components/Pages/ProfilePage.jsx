@@ -81,7 +81,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '20px'
+    padding: '400px'
   },
   profilePicture: {
     width: '150px',
@@ -96,27 +96,27 @@ const styles = {
     gap: '15px',
     width: '300px',
     padding: '20px',
-    border: '1px solid #ccc',
+    border: '1px solid gold',
     borderRadius: '5px',
-    backgroundColor: '#fff'
+    backgroundColor: 'black'
   },
   input: {
     padding: '10px',
     fontSize: '16px',
-    border: '1px solid #ccc',
+    border: '1px solid gold',
     borderRadius: '5px'
   },
   button: {
     padding: '10px',
     fontSize: '16px',
     color: '#fff',
-    backgroundColor: '#007bff',
+    backgroundColor: 'gold',
     border: 'none',
     borderRadius: '5px',
     cursor: 'pointer'
   },
   buttonHover: {
-    backgroundColor: '#0056b3'
+    backgroundColor: '#d4af37'
   }
 };
 

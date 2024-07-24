@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 400px;
   }
   
   .profile-picture {
@@ -19,15 +19,15 @@
     gap: 15px;
     width: 300px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid gold;
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #000000;
   }
   
   .input {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid gold;
     border-radius: 5px;
   }
   
@@ -35,13 +35,13 @@
     padding: 10px;
     font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: gold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .button:hover {
-    background-color: #0056b3;
+    background-color: #d4af37;
   }
   

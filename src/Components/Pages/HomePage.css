@@ -1,74 +1,51 @@
-
+/* src/pages/HomePage.css */
 .container {
-  display: flex;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 400px;
+  max-width: 800px;
   background-color: black;
-  color: gold;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding-left: 400px;
-  }
+  font-family: Arial, sans-serif;
+}
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: gold;
+}
+
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
 
 .card {
-  background-color: black;
-  border: 2px solid gold;
-  border-radius: 10px;
-  padding: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  width: 300%;
-  max-width: 400px;
-  text-align: center;
-}
-
-h2 {
-  color: gold;
-}
-
-button {
-  background-color: goldenrod;
-  color: gold;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: darkgoldenrod;
-}
-
-input, select {
-  padding: 10px;
-  margin: 10px 0;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-input:focus, select:focus {
-  border-color: gold;
-  outline: none;
-}
-
-.task-list {
-  list-style: none;
-  padding: 0;
-}
-
-.task-list li {
-  background-color: white;
+  background-color: #000;
   color: black;
-  margin: 10px 0;
-  padding: 10px;
+  border: 1px solid gold;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.task-list li.completed {
-  text-decoration: line-through;
-  color: gray;
+.task-form-card, .task-list-card {
+  background-color: #000;
+  color: gold;
+  border: 1px solid gold;
+  border-radius: 5px;
+  padding: 100px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-form-card {
+  margin-bottom: 40px;
 }

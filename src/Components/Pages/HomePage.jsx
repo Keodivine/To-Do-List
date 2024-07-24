@@ -1,14 +1,25 @@
 // src/pages/HomePage.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TaskList from '../TaskList.jsx';
 import TaskForm from '../TaskForm.jsx';
 import FilterTasks from '../FilterTasks.jsx';
 import SearchBar from '../SearchBar.jsx';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 const HomePage = () => {
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem('tasks')) || []);
   const [filter, setFilter] = useState({});
+  const [profilePicture, setProfilePicture] = useState(null);
+
+  useEffect(() => {
+    const currentUser = localStorage.getItem('currentUser');
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const currentUserData = users.find((u) => u.username === currentUser);
+    if (currentUserData) {
+      setProfilePicture(currentUserData.profilePicture);
+    }
+  }, []);
 
   const addTask = (task) => {
     const newTasks = [...tasks, task];
@@ -53,19 +64,27 @@ const HomePage = () => {
 
   return (
     <div className="container">
-      <h2>Home</h2>
-      <div className="card">
+      <div className="header">
+        <h1>Task Manager</h1>
+        {profilePicture && (
+          <Link to="/profile">
+            <img src={profilePicture} alt="Profile" className="profile-picture" />
+          </Link>
+        )}
+      </div>
+      <div className="task-form-card">
         <TaskForm addTask={addTask} />
       </div>
       <FilterTasks setFilter={setFilter} />
       <SearchBar setFilter={setFilter} />
-      
-      <TaskList
-        tasks={tasks.filter(applyFilters)}
-        updateTask={updateTask}
-        deleteTask={deleteTask}
-        markTaskCompleted={markTaskCompleted}
-      />
+      <div className="task-list-card">
+        <TaskList
+          tasks={tasks.filter(applyFilters)}
+          updateTask={updateTask}
+          deleteTask={deleteTask}
+          markTaskCompleted={markTaskCompleted}
+        />
+      </div>
     </div>
   );
 };
