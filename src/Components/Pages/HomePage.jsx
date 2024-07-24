@@ -59,6 +59,7 @@ const HomePage = () => {
       </div>
       <FilterTasks setFilter={setFilter} />
       <SearchBar setFilter={setFilter} />
+      
       <TaskList
         tasks={tasks.filter(applyFilters)}
         updateTask={updateTask}

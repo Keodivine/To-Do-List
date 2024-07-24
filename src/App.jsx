@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import RegistrationPage from './Components/Pages/RegistrationPage.jsx';
-import LoginPage from './Components/Pages/LoginPage.jsx';
+import LoginPage from './Components/Pages/index.jsx';
 import HomePage from './Components/Pages/HomePage.jsx';
 import ProfilePage from './Components/Pages/ProfilePage.jsx';
 import CompletedTasksPage from './Components/Pages/CompletedTasksPage.jsx';
